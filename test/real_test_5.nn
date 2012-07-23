@@ -1,0 +1,41 @@
+PACKAGE first_pack {
+
+	a = 1;
+	b = 1;
+
+	first_proc ( variable , cost )
+	{
+		variable = 2;
+		cost = 1;
+		i = 1;
+
+		WHILE (cost <= variable)
+		{
+			i = i + 1 ;
+			cost += 1;
+		}
+	}
+
+	first_proc (a , b);
+}
+
+PACKAGE second_pack {
+
+	a = 2;
+	b = 2;
+
+	first_proc ( variable , cost )
+	{
+		variable = 3;
+		cost = 1;
+		i = 1;
+
+		WHILE (cost <= variable)
+		{
+			i = i + 1 ;
+				cost += 1;
+		}
+	}
+
+	first_proc ( a , b );
+} 

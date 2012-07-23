@@ -1,0 +1,26 @@
+/*Date: 12 July 2012 */
+
+FUNC testwhile (b)
+{
+
+	a = 10;
+	b = 10;
+	WHILE ( a > 0 )
+	{
+		b = b + 1;
+		
+		PRINT ("\n WHILE test: A = ", a, " B = ", b, "\n");
+		IF ( b > 15 ) 
+			RETURN (b);
+
+		a -= 1;
+	}
+
+	RETURN (a + 3);
+}
+
+a = 0;
+b= 1;
+a = testwhile(b);
+
+PRINT ("\n After test: A = ", a, "\n");

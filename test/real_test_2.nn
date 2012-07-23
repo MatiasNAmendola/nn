@@ -1,0 +1,7 @@
+somefunction ( a , b )
+{
+	WHILE ( a + b )
+	{
+		a = b;
+	}
+}

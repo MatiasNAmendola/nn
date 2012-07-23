@@ -1,0 +1,53 @@
+PACKAGE first_pack {
+
+	a = 2;
+	b = 1;
+
+	first_proc ( variable , cost )
+	{
+		/*variable = 2;*/
+		/*cost = 1;*/
+		i = 1;
+
+		WHILE (cost)
+		{
+			i = i + 1 ;
+			IF (variable)
+			{
+				variable -= 1;
+			} ELSE
+			{ 
+				cost -= 1;
+			}
+		}
+	}
+
+	first_proc (a , b);
+}
+
+PACKAGE second_pack {
+
+	a = 3;
+	b = 1;
+
+	first_proc ( variable , cost )
+	{
+		/*variable = 3;*/
+		/*cost = 1;*/
+		i = 1;
+
+		WHILE (cost)
+		{
+			i = i + 1 ;
+			IF (variable)
+			{
+				variable -= 1;
+			} ELSE
+			{ 
+				cost -= 1;
+			}
+		}
+	}
+
+	first_proc ( a , b );
+} 

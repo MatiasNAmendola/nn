@@ -1,0 +1,30 @@
+PACKAGE new_package {
+
+
+	NETWORK signet ( siglayer inlayer , siglayer hidlayer , siglayer outlayer)
+	{
+		m = 1;
+		somefunction(a,b,c);
+	}
+
+
+	somefunction ( a, b, c, d, e, f, g, h , i)
+	{
+		a = a + b - c * d / e * f - g - h / i + a;
+	}
+	CONNECTION weight (signode out , signode in)
+	{
+		a = a + 1;
+	}
+
+	NODE signode (weight in, weight out)
+	{
+		c = (2 + 2) - 3;
+	}
+
+	LAYER siglayer ( signode )
+	{
+		a = a + b;
+	}
+
+}

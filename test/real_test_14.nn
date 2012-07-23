@@ -1,0 +1,11 @@
+/* This program is intended to test 	*/
+/* 1. array definition 			*/
+/* 2. array in expression list  	*/
+
+arry = 1;
+test = 0;
+i = 1;
+j = 2;
+
+test = arry + arry[0][12][14][1][2][5678] - i + j;
+

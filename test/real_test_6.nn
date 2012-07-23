@@ -1,0 +1,51 @@
+i = 1;
+var = 0;
+eqvar = 0;
+neqvar = 0;
+gtvar = 0;
+ltvar = 0;
+gteqvar = 0;
+lteqvar = 0;
+andvar = 0;
+orvar = 0;
+logorvar = 0;
+logandvar = 0;
+
+cost = 1;
+
+WHILE (cost)
+{
+	IF (i | var)
+	{
+		orvar += 1;
+	}
+	
+	IF (i & var)
+		andvar  += 1;
+
+	IF (i < var)
+		ltvar += 1;
+	
+	IF (i > var)
+		gtvar += 1;
+
+	IF (i <= var)
+		lteqvar += 1;
+	
+	IF (i >= var)
+		gteqvar += 1;
+
+	IF (i || var)
+		logorvar += 1;
+
+	IF (i && var)
+		logandvar += 1;
+
+	IF (i != var)
+		neqvar += 1;
+
+	IF (i == var)
+		eqvar += 1;
+
+	cost -= 1;
+} 

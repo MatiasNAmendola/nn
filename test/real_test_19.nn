@@ -1,0 +1,19 @@
+/*Date: 11 June 2012 */
+
+/*This program is to test the IO 'OPEN' */
+
+FUNC somefunc(filename,mode)
+{
+	fd = 0;
+	string = "This is super Great\n";
+	fd = OPEN(filename,mode);
+	WRITE(fd,string);
+	WRITE(fd,string);
+	WRITE(fd,string);
+	WRITE(fd,string);
+	WRITE(fd,string);
+	CLOSE(fd);
+}
+
+somefunc("abc.txt","W");
+

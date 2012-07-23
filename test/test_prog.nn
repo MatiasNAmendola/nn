@@ -1,0 +1,42 @@
+SOMETHING FUNCTION first_function ( ) IS EXTERNAL FUNCTION
+
+PACKAGE first_package {
+	SOMETHING FUNCTION first_function ( ) IS EXTERNAL FUNCTION;
+	EveryThing FUNCTION second_function ( ) IS EXTERNAL FUNCTION;
+}
+
+PACKAGE second_package {
+	Good FUNCTION third_function () IS INCLUDED FUNCTION;
+}
+
+PACKAGE third_package {
+	Good FUNCTION fourt_function () IS EXTERNAL FUNCTION;
+}
+
+PACKAGE first_package {
+	SOMETHING FUNCTION first_function ( ) IS EXTERNAL FUNCTION;
+	EveryThing FUNCTION second_function ( ) IS EXTERNAL FUNCTION;
+}
+
+PACKAGE second_package {
+	Good FUNCTION third_function () IS INCLUDED FUNCTION;
+}
+
+PACKAGE third_package {
+	Good FUNCTION fourt_function () IS EXTERNAL FUNCTION;
+}
+
+PACKAGE first_package {
+	SOMETHING FUNCTION first_function ( ) IS EXTERNAL FUNCTION;
+	EveryThing FUNCTION second_function ( ) IS EXTERNAL FUNCTION;
+}
+
+PACKAGE second_package {
+	Good FUNCTION third_function () IS INCLUDED FUNCTION;
+}
+
+PACKAGE third_package {
+	Good FUNCTION fourt_function () IS EXTERNAL FUNCTION;
+}
+
+SOMETHING FUNCTION first_function ( ) IS EXTERNAL FUNCTION

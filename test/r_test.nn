@@ -1,0 +1,7 @@
+PACKAGE mypack {
+
+	function (a,b) 
+	{ 
+		a = a + b; 
+	}
+}

@@ -1,0 +1,49 @@
+PACKAGE new_package {
+
+
+	NETWORK signet ( siglayer inlayer , siglayer hidlayer , siglayer outlayer)
+	{
+		m = 1;
+		somefunction(a,b,c);
+	}
+
+
+	somefunction (a,b)
+	{
+		a = 1;
+		b = 1;
+		c = 1;
+		d = 3;
+		e = 1;
+		f = 1;
+		g = 1;
+		h = 1;
+		i = 1;
+		a = a + b - c * d / (e * f) - g - h / i + a;
+		WHILE ( (d) )
+		{
+			d = d - 1;
+		}
+
+		IF ((a))
+		{
+			c = c - 2;	
+		}
+	}
+	CONNECTION weight (signode out , signode in)
+	{
+		a = a + 1;
+	}
+
+	NODE signode (weight in, weight out)
+	{
+		c = (2 + 2) - 3;
+	}
+
+	LAYER siglayer ( signode )
+	{
+		a = a + b;
+	}
+
+	/*somefunction (a,b,c,d,e,f,g,h,i);*/
+}

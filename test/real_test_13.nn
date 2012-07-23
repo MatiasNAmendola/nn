@@ -1,0 +1,24 @@
+/* This program is intended to test 			   */
+/* 1. pass by reference implementation 			   */
+/* 2. assignment when reference is involved in expression  */
+
+i = 1;
+j = 2;
+
+FUNC addition (a,b, result)
+{
+	result = a + b;
+}
+
+FUNC subtraction (a,b,result)
+{
+	result = a - b;
+}
+
+k = 1;
+l = 0;
+m = 0;
+n = &m;
+addition (i,j,&k);          /* here value should be k = 3 */
+subtraction (j,i,&l);       /* here value should be l = 1 */
+addition(i,j,n);	    /* here value should be m = 3 , as n is a reference of m */

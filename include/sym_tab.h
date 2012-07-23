@@ -1,0 +1,123 @@
+/*    sym_tab.h
+ *
+ *    Copyright (C) 2011, 2012 by Suhel Momin
+ *
+ *    You may distribute under the terms of the GNU General Public
+ *    License as specified in the README file.
+ *
+ */
+
+#ifndef __SYM_TAB_H__
+#define __SYM_TAB_H__
+
+#include <stdlib.h>
+#include "common.h"
+#include "error.h"
+
+/* redefining OP here as a workaround since we cannot use op.h here */
+/* due to cyclic header file dependency on sym_tab.h in op.h */
+struct opcode;
+#define OP	struct opcode
+
+extern char *CURR_PACKAGE;
+
+/*
+ * SYMBOL TABLE
+ * It is used to store the symbols and their current values for the program
+ * ------------------------------------------------------------------------------------------------------
+   |  TYPE  |  PACKAGE NAME  |  SYMBOL NAME  |   VALUES                               	                |
+   |-----------------------------------------------------------------------------------------------------
+   |        |                |               |   INT   | UINT  | FLOAT | STRING  | OP |  VALUES POINTER | 
+   |-----------------------------------------------------------------------------------------------------
+   |        |                |               |         |       |       |         |    |                 |
+   |-----------------------------------------------------------------------------------------------------
+   |        |                |               |         |       |       |         |    |                 |
+    -----------------------------------------------------------------------------------------------------
+
+ */
+typedef enum {
+	SYM_TYPE_UNKNOWN = 0,
+	SYM_TYPE_MAGIC	 = 1,
+	SYM_TYPE_INT	 = 2,
+	SYM_TYPE_UINT	 = 3,
+	SYM_TYPE_FLOAT	 = 4,
+	SYM_TYPE_STRING  = 5,
+	SYM_TYPE_OP	     = 6,
+	SYM_TYPE_REF	 = 7,
+	SYM_TYPE_VAL	 = 8,
+	SYM_TYPE_ARRAY	 = 9,
+	SYM_TYPE_SYMBOL	 = 10
+} __sym_tab_type;
+
+#define BASE_SYM_TAB	char                    *symbol; \
+		        __sym_tab_value         value;	 \
+		        struct __sym_tab__      *next;	 
+
+struct __sym_tab__;
+
+typedef struct __sym_tab_val__ {
+	union {
+		INT			i_val;
+		UINT			ui_val;
+		FLOAT			f_val;
+		char			*s_val;
+		OP			*op_val;
+		struct __sym_tab_val__	*ptr_val;
+		struct __sym_tab__ 	*ref_val;
+		
+	} u;
+	UINT	type;
+} __sym_tab_value;
+
+typedef struct __sym_tab__{
+	BASE_SYM_TAB
+	char			*package;
+} __sym_tab;
+
+typedef struct __sym_tab_arg__{
+	BASE_SYM_TAB
+} __sym_tab_arg;
+
+/*
+ * Function Declarations for argument stack
+ */
+
+INT     __sym_tab_arg_compare(__sym_tab_arg *src, __sym_tab_arg *dest);
+INT     __sym_tab_arg_delete(__sym_tab_arg *node);
+
+__sym_tab *     __sym_tab_arg_get_sym(char *symbol);
+__sym_tab_value* __sym_tab_arg_get_value(char *symbol);
+
+INT __sym_tab_arg_set_sym(char *symbol, __sym_tab_type sym_type, __sym_tab_value value);
+INT __sym_tab_arg_create_sym(char *symbol);
+INT __sym_tab_arg_set_sym_name(__sym_tab_arg *head,char *symbol);
+
+__sym_tab_arg * __sym_tab_arg_push_magic();
+__sym_tab_arg * __sym_tab_arg_push_val(__sym_tab_type type, __sym_tab_value val);
+void __sym_tab_arg_tmp_clear();
+__sym_tab_arg * __sym_tab_arg_tmp_push_magic();
+__sym_tab_arg * __sym_tab_arg_tmp_push_val(__sym_tab_type type, __sym_tab_value val);
+INT __sym_tab_arg_print_sym(char *symbol);
+INT __sym_tab_arg_print_all_sym();
+
+/*
+ * Function Declarations for program stack
+ */
+
+INT	__sym_tab_compare(__sym_tab *src, __sym_tab *dest); 
+INT	__sym_tab_delete(__sym_tab *node);
+char * __sym_tab_val_to_string(__sym_tab_value val);
+
+#define CONST_VAL_TO_STRING (val)	__sym_tab_val_to_string(val)
+
+__sym_tab *	__sym_tab_get_sym(char *package, char *symbol);
+__sym_tab_value * __sym_tab_get_value(char *package, char *symbol);
+
+INT __sym_tab_set_sym(char *package, char *symbol, __sym_tab_type sym_type, __sym_tab_value value);
+INT __sym_tab_create_sym(char *package, char *symbol);
+__sym_tab * __sym_tab_chase_symbol(__sym_tab * symbol);
+
+INT __sym_tab_print_sym(char *package, char *symbol);
+INT __sym_tab_print_all_sym();
+
+#endif // __SYM_TAB_H__

@@ -1,0 +1,18 @@
+PACKAGE first_pack {
+
+	alfa = 10;
+	beta = 2;
+	gamma = alfa + beta;
+	zeta = alfa + beta + beta + alfa;
+}
+
+PACKAGE second_pack {
+
+	alfa = 1;
+	beta = 2;
+	gamma = alfa + beta;
+	zeta = alfa + beta + beta + alfa;
+	z =  alfa - beta - beta + beta + beta + beta * beta;
+	m = beta * beta;
+	n = m;
+}

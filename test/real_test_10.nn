@@ -1,0 +1,28 @@
+/* This program is intended to test 							   */
+/* 1. recursive function calling 							   */
+/* 2. proper holding of local/argument variable on function stack while in recursion 	   */
+/*                                            						   */
+/* There are two functions, redution() and assertion() both calling themselves recursively */
+
+ci = 4;
+cb = 2;
+FUNC reduction (a)
+{
+	c = a-1;
+	IF ( c > 0)
+		reduction(c);
+}
+
+reduction (ci);
+reduction (cb);
+
+FUNC assertion (b,d)
+{
+	c = b + 1;
+	IF ((b+1) < d)
+		assertion (c,d);
+}
+
+bb = 1;
+dd = 3;
+assertion(bb,dd);

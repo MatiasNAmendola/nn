@@ -1,0 +1,36 @@
+/*Testing the new type of operations*/
+
+FUNC somefunc (a)
+{
+	a = 4;
+	b = 1;
+	c = 400;
+	d = 2;
+	e = 2;
+	f = 10;
+	PRINT ("\n---STARTING WITH THE COUNTING----\n");
+	WHILE ((((a >=  0))))
+	{
+		b = b + 1;
+		c = c / d;
+		e = e * d;
+		f = f - d;
+		PRINT("value of b : ",b," value of c: ",c, " value of e: ",e,
+		      " value of f : ",f);
+		PRINT("\n");
+		a = a - 1;
+		IF ( a == 0) 
+		{
+			/*PRINT ("\n 'a' is approaching 0 : beware :P \n");*/
+			m = 0;
+		}
+
+	}
+	PRINT ("\n---COUNTING DONE---\n");
+	RETURN (e);
+}
+a=1;
+b = 2;
+PRINT ("\n Printing B before : ", b, " \n");
+b = somefunc(a);
+PRINT ("\n Printing B after : ", b, " \n");

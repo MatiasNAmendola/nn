@@ -1,0 +1,27 @@
+/* This is to test if IO functionality is considerered */
+/* IO that are provisioned uptil now are */
+/* PRINT */
+/* SCAN  */
+/* READ  */
+/* WRITE */
+/* OPEN  */
+/* CLOSE */
+
+
+/* PRINT ("hello world!	goodworld!	\n"); */
+
+a = "\tgoodwork";
+b = "\tnicejob";
+c = 234;
+PRINT (a,b,a,b,a,b,"\n");
+
+PRINT ("Let see if it prints this c = : ", c, "\n");
+
+/*PRINT(a);*/
+/*SCAN(a);*/
+/*READ(a);*/
+/*WRITE(a);*/
+/*OPEN(a);*/
+/*CLOSE(a);*/
+
+

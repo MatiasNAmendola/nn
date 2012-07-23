@@ -1,0 +1,47 @@
+NSmart Programming Language
+
+The programming language is intended to make the life of a ANN creator easier.
+
+Currenlty, we are working on getting the basic grammer of the language up and running.
+
+Uptil now the support for 
+1. simple package creation
+2. variable declaration / assignment
+3. addition , subtraction, multiplication, division 
+4. function definition
+5. function calling ( though arguments are now only pass by value)
+6. while loop
+7. if -- else condition statement
+8. CONNECTION , NODE , LAYER and NETWORK can be created similar to function definition style.
+9. relational statements like && , ||, | , & , <, > , <= , >= , == , != are suppored 
+10. argument stack framework for storing arguments and local variables for function.
+11. implementing the support for having expression as argument for functions calling.
+12. implementing the reference support, e.g. foo = &foo_bar OR foo(a,b,&c)
+13. Basic support for IO commands is provided, (it is still not complete tho').
+14. Grammar modified to enable IO functions of 
+	PRINT, SCAN, READ, WRITE, OPEN, CLOSE
+15. Partial Implementation of PRINT done.
+16. Added support for Debug print statements
+17. cleaned the unnecessary problems with relational statements.
+18. Updated the makefile to be more flexible
+19. Updated the makefile to consider parser/lexer generation seperately and nn executable seperately
+	a. added commands are
+		make base
+		make all
+		make clean
+		make clean-base
+
+20. Implemented the 'RETURN' statement
+21. Some more improvements in IO for 'OPEN' 
+22. Tested working 'OPEN' 'WRITE' 'CLOSE' sequence
+
+----------- IMMEDIATE FUTURE WORK --------
+
+1. Support for standard IO (work in progress)
+2. array type and structuring of common data type (work in progress)
+
+-----------------------------------------
+
+email address for communication
+suhelmomin  at  gmail dot com
+

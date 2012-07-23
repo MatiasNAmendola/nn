@@ -1,0 +1,9 @@
+somefunc ( a, b)
+{
+	c = a + b;
+}
+
+l = 50;
+m = 2;
+somefunc(l,m);
+

@@ -1,0 +1,15 @@
+somefunc ( a, b)
+{
+	c = a + b;
+}
+
+l = 50;
+m = 2;
+somefunc(l,m);
+somefunc(l,m);
+
+a = 1;
+b = 2;
+
+somefunc(a,b);
+misbah = 20;

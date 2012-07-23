@@ -1,0 +1,12 @@
+PACKAGE mypackage {
+	a = 2 + 3;
+	b = 4;
+	c = 5+5+b;
+}
+
+PACKAGE secondpackage {
+	c = 5;
+	d = 1;
+	e = 2 + 4;
+}
+

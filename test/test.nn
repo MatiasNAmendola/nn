@@ -1,0 +1,27 @@
+c = 2;
+d -= 3;
+
+PACKAGE first_package {
+
+a = 12;
+b = 13;
+c = 14; l += 23456; l = 222;
+c += 2 ;
+}
+
+PACKAGE second_package {
+
+mnop = 345; something += 32; hello = 32;
+
+}
+
+PACKAGE third_package { whatthehell = 23; isthisworth += 43; }
+
+PACKAGE experiment {
+
+a = 1;
+b += 2;
+c -= 3;
+d %= 4;
+
+}

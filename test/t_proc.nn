@@ -1,0 +1,40 @@
+PACKAGE std_func {
+	FUNC sig_func(REAL in, REAL out)
+	{
+		out = in*in;
+	}
+
+	FUNC step_func (REAL in, REAL theta, REAL out)
+	{
+		if (in >= theta) 
+		{
+			out = 1;
+		} else {
+			out = 0;
+		}
+	}
+
+	FUNC log_func (
+}
+
+PACKAGE first_package {
+
+	NODE Sig_Node(IN in, OUT out)
+	{
+		REAL theta;
+
+		step_func (in, theta, out);
+	}
+
+	CONNECTION Weight (FROM Sig_Node,TO Sig_Node);
+	LAYER layer (Sig_Node node);
+	NETWORK network (layer inlayer, layer hidlayer, layer outlayer);
+
+
+
+
+	someprocedure ( a, b, c )
+	{
+		c = a + b + c;
+	}
+}

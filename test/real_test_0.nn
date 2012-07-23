@@ -1,0 +1,20 @@
+/* Very basic test */
+/* 1. variable declaration and assignment */
+
+a = 1;
+b = 2;
+c = 10;
+
+FUNC change(l,m)
+{
+	m = l+l;
+}
+
+change(c,&b);
+
+d = 1;
+e = &d;
+f = &e;
+
+f = 100;
+change (a,f);

@@ -1,0 +1,15 @@
+variable = 2;
+cost = 1;
+i = 1;
+
+WHILE (cost)
+{
+	i = i + 1 + 1 - 1;
+	IF (variable)
+	{
+		variable -= 1;
+	} ELSE
+	{ 
+		cost -= 1;
+	}
+} 

@@ -1,0 +1,10 @@
+/*This is to test the the string type of variables */
+
+a = "Hello World";
+
+b = a;
+
+a = "world is not enough";
+c = &a;
+
+c = "good work";
